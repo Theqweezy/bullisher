@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @idea.description %>
+</p>
+
+<%= render partial: "comments/comments", locals: {commentable: @idea} %>
+<%= render partial: "comments/form", locals: {commentable: @idea} %>
+
+<% if @idea.user == current_user %>
+	<%= link_to 'Edit', edit_idea_path(@idea) %>
+<% end %>
+<%= link_to 'Back', ideas_path %>
+

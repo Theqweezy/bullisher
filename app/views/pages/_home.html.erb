@@ -1,0 +1,13 @@
+<div class="page-header center">     
+
+     <% if user_signed_in? %>
+     	<h1> Welcome back! :) </h1>
+     <% else %>
+	     <h1>You aren't logged in</h1>
+		     <p> Want to 
+		       <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+		       or
+		       <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %> ?
+		     </p>
+	  <% end %>    
+</div>
