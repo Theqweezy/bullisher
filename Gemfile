@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.4.1'
-gem 'closure_tree'
+gem 'ancestry'
 gem 'paperclip', '~> 4.2'
 gem 'masonry-rails', '~> 0.2.0'
 

@@ -15,3 +15,14 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+#comments {
+		.comment {
+			padding: 1em 0;
+			border-top: 1px solid #E9E9E9;
+			.lead {
+				margin-bottom: 0;
+			}
+		}
+	}

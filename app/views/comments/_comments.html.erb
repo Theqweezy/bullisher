@@ -1,7 +1,19 @@
-<h3> Comments </h3>
+<br>
+<br>
 
-<% @idea.comments.each do |comment| %>
-	<div> 
-		<%= comment.body %>
+<div id="comments">
+	<h3> Comments </h3>
+	<% @idea.comments.each do |comment| %>
+	<div class="panel panel_default">
+		<div>
+		<p><strong><%= comment.user.name %></strong><small> || <strong><%= time_ago_in_words(comment.created_at) %> ago</strong></small></p>
+		<p class="lead"><%= comment.body %></p>
+		 
 	</div>
-<% end %>
+		<div class="actions">
+			<%= link_to "Reply", new_comment_path(:parent_id => comment) %>
+		</div> 
+	
+	</div>
+	<% end %>
+</div>

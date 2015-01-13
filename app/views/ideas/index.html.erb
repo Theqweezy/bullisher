@@ -2,7 +2,7 @@
 
 
 
-  <tbody>
+  <div id="ideas">
     <% @ideas.each do |idea| %>
       <tr>
         <div><%= link_to idea.description, idea %>
@@ -12,8 +12,8 @@
         <% end %></div>
       </tr>
     <% end %>
-  </tbody>
-</table>
+  </div>
+
 
 <br>
 

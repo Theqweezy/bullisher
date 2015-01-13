@@ -10,10 +10,13 @@ class IdeasController < ApplicationController
   end
 
   def show
+    @comments = @idea.comments
   end
 
+
   def new
-    @idea = current_user.ideas.build
+    @idea = Idea.new
+    @idea.comments.build
     respond_with(@idea)
   end
 

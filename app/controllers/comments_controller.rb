@@ -1,6 +1,11 @@
 class CommentsController < ApplicationController
 	before_action :authenticate_user!
 
+
+	def new
+		@comment = Comment.new(:parent_id => params[:parent_id])
+	end
+
 	def create
 		@comment = @commentable.comments.new comment_params
 		@comment.user = current_user
